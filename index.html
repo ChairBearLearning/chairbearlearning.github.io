@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Demo site still under construction</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+<style>
+body {font-size:16px;}
+.halves img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.halves img:hover{opacity:1}
+.grad-greyscale{filter:grayscale(75%)}
+.sidebar-main{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
+.teal{color:#fff!important;background-color:#23cbab!important}
+.top{position:fixed;width:100%;z-index:1}.top{top:0}
+.large-txt{font-size:18px!important}
+.padding{padding:8px 16px!important}.padding-large{padding:12px 24px!important}
+.padding-16{padding-top:16px!important;padding-bottom:16px!important}.padding-24{padding-top:24px!important;padding-bottom:24px!important}
+.padding-32{padding-top:32px!important;padding-bottom:32px!important}
+.padding-64{padding-top:64px!important;padding-bottom:64px!important}
+.basic-btn:hover{color:#000!important;background-color:#ccc!important}
+.basic-btn{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.basic-btn{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.basic-btn:disabled{cursor:not-allowed;opacity:0.3}
+.dropdowns-hover:hover > .basic-btn:first-child,.dropdown-on-click:hover > .basic-btn:first-child{background-color:#ccc;color:#000}
+.the-bar-block .dropdowns-hover .basic-btn,.the-bar-block .dropdown-on-click .basic-btn{width:100%;text-align:left;padding:8px 16px}
+.the-bar .basic-btn{white-space:normal}
+.dropdowns-hover.mini-mobile .basic-btn,.dropdown-on-click.mini-mobile .basic-btn{width:100%}
+.basic-btn:hover{color:#000!important;background-color:#ccc!important}
+.display-tl{position:absolute;left:0;top:0}.display-tr{position:absolute;right:0;top:0}
+.containers{padding:0.01em 16px}
+.containers:after,.containers:before,.row-padding:after,.row-padding:before{content:"";display:table;clear:both}
+.tb-col,.halves{float:left;width:100%}
+.white-txt,.hover-white:hover{color:#000!important;background-color:#fff!important}
+.xlarge{font-size:24px!important}      
+.margins-r{margin-right:16px!important}
+.overlay{position:fixed;display:none;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.5);z-index:2}
+.jumbo-txt{font-size:64px!important}
+.xxxlarge{font-size:48px!important}
+.text-teal{color:#23cbab!important}
+.rounder{border-radius:4px}
+.margin-btm{margin-bottom:16px!important}
+.black-one,.hover-black:hover{color:#fff!important;background-color:#000!important}
+xxlarge{font-size:36px!important}
+.opacity,.hover-opacity:hover{opacity:0.60}
+.modal-two{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
+.transp{background-color:transparent!important}
+.darker-grey{color:#fff!important;background-color:#616161!important}
+.main-centering {display:inline-block;width:auto; text-align:center!important}
+.light-grey{color:#000!important;background-color:#f1f1f1!important}
+.image-css{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}
+.ul-css li:hover{background-color:#ccc}
+.ul-css{list-style-type:none;padding:0;margin:0}.ul-css li{padding:8px 16px;border-bottom:1px solid #ddd}.ul-css li:last-child{border-bottom:none}
+right-css{float:right!important}
+                                                                                                         
+@media (max-width:768px){.modal-two{padding-top:50px}}
+@media (min-width:993px){.modal-content{width:900px}.hide-large-main{display:none!important}.sidebar-main.collapable{display:block!important}}
+@media (max-width:992px){.sidebar-main.collapable{display:none}.content-m{margin-left:0!important;margin-right:0!important}
+@media (min-width:993px){.modal-content{width:900px}.hide-large-main{display:none!important}}}
+@media (max-width:600px){.modal-two{padding-top:30px}}
+
+.ani-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="sidebar-main teal collapable top large-txt padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="close_modal()" class="basic-btn hide-large-main display-tl" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="containers">
+    <h3 class="padding-64"><b>Chair<br>Bear</b></h3>
+  </div>
+  <div class="the-bar-block">
+    <a href="#" onclick="close_modal()" class="the-bar-item basic-btn hover-white">Home</a>
+    <a href="#showcase" onclick="close_modal()" class="the-bar-item basic-btn hover-white">Showcase</a>
+    <a href="#services" onclick="close_modal()" class="the-bar-item basic-btn hover-white">In progress</a>
+    <a href="#designers" onclick="close_modal()" class="the-bar-item basic-btn hover-white">In progress</a>
+    <a href="#packages" onclick="close_modal()" class="the-bar-item basic-btn hover-white">In progress</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="containers top hide-large-main teal xlarge padding">
+  <a href="javascript:void(0)" class="basic-btn teal margins-r" onclick="open_modal()">☰</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large-main" onclick="close_modal()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="content-m" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="containers" style="margin-top:80px" id="showcase">
+    <h1 class="jumbo-txt"><b>Software & Test Engineer</b> </br> and SEO Technician</h1>
+    <h1 class="xxxlarge text-teal"><b>Project Demos</b></h1>
+    <hr style="border:5px solid darkseagreen" class="rounder">
+  </div>
+
+  <!-- Photo grid (modal) -->
+  <div class="row-padding">
+    <div class="halves">
+      <img src="#" style="width:100%" onclick="onClick(this)" alt="IMG code project screenshot">
+      <img src="#" style="width:100%" onclick="onClick(this)" alt="IMG code project screenshotn">
+      <img src="#" style="width:100%" onclick="onClick(this)" alt="IMG code project screenshots">
+    </div>
+
+    <div class="halves">
+      <img src="#" style="width:100%" onclick="onClick(this)" alt="IMG code project screenshot">
+      <img src="#" style="width:100%" onclick="onClick(this)" alt="IMG code project screenshot">
+      <img src="#" style="width:100%" onclick="onClick(this)" alt="IMG code project screenshot">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="modal-two black-one" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="basic-btn black-one xxlarge display-tr">×</span>
+    <div class="modal-content ani-zoom main-centering transp padding-64">
+      <img id="img01" class="image-css">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="containers" id="services" style="margin-top:75px">
+    <h1 class="xxxlarge text-teal"><b>X</b></h1>
+    <hr style="border:5px solid darkseagreen" class="rounder">
+    <p>placeholder
+    </p>
+  </div>
+
+  <!-- Designers -->
+  <div class="containers" id="designers" style="margin-top:75px">
+    <h1 class="xxxlarge text-teal"><b>Companies Worked With</b></h1>
+    <hr style="border:5px solid darkseagreen" class="rounder">
+    <p>I have worked with some big named brand companies across the years providing various services, read more below.
+    </p>
+    <p><b>placeholder</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="row-padding grad-greyscale">
+    <div class="tb-col m4 margin-btm">
+      <div class="light-grey">
+        <img src="#" alt="Joules" style="width:100%">
+        <div class="containers">
+          <h3>Joules</h3>
+          <p class="opacity">Fashion Company</p>
+          <p>X</p>
+        </div>
+      </div>
+    </div>
+    <div class="tb-col m4 margin-btm">
+      <div class="light-grey">
+        <img src="#" alt="Durex" style="width:100%">
+        <div class="containers">
+          <h3>Durex</h3>
+          <p class="opacity">Adult Industry</p>
+          <p>X</p>
+        </div>
+      </div>
+    </div>
+    <div class="tb-col m4 margin-btm">
+      <div class="light-grey">
+        <img src="#" alt="Wayfair" style="width:100%">
+        <div class="containers">
+          <h3>Wayfair</h3>
+          <p class="opacity">Home Decor</p>
+          <p>X</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="containers" id="packages" style="margin-top:75px">
+    <h1 class="xxxlarge text-teal"><b>Coding Languages</b></h1>
+    <hr style="border:5px solid darkseagreen" class="rounder">
+    <p> placeholder test</p>
+  </div>
+
+  <div class="row-padding">
+    <div class="halves margin-btm">
+      <ul class="ul-css light-grey main-centering">
+        <li class="darker-grey xlarge padding-32">PHP</li>
+        <li class="padding-16">5+ years experience</li>
+        <li class="padding-16">PHPUnit, Cypress</li>
+        <li class="padding-16">Worked across B2B</li>
+        <li class="light-grey padding-24">
+          <button class="basic-btn white-txt padding-large hover-black">See Examples</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="halves">
+      <ul class="ul-css light-grey main-centering">
+        <li class="teal xlarge padding-32">Python</li>
+        <li class="padding-16">1 Year</li>
+        <li class="padding-16">Selenium, Cypress</li>
+        <li class="padding-16">Code projects for qualification</li>
+        <li class="light-grey padding-24">
+          <button class="basic-btn teal padding-large hover-black">See Examples</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+<!-- End page content -->
+</div>
+
+
+<div class="light-grey containers padding-32" style="margin-top:75px;padding-right:58px"><p class="right-css">Powered by <a href="#" title="demo in progress" target="_blank" class="hover-opacity">in progres</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function open_modal() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function close_modal() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
