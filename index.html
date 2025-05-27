@@ -32,7 +32,7 @@ body {font-size:16px;}
 .containers:after,.containers:before,.row-padding:after,.row-padding:before{content:"";display:table;clear:both}
 .tb-col,.halves{float:left;width:100%}
 .white-txt,.hover-white:hover{color:#000!important;background-color:#fff!important}
-.xlarge{font-size:24px!important}      
+.xlarge{font-size:24px!important}
 .margins-r{margin-right:16px!important}
 .overlay{position:fixed;display:none;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.5);z-index:2}
 .jumbo-txt{font-size:64px!important}
@@ -50,9 +50,159 @@ xxlarge{font-size:36px!important}
 .light-grey{color:#000!important;background-color:#f1f1f1!important}
 .image-css{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}
 .ul-css li:hover{background-color:#ccc}
-.ul-css{list-style-type:none;padding:0;margin:0}.ul-css li{padding:8px 16px;border-bottom:1px solid #ddd}.ul-css li:last-child{border-bottom:none}
+.ul-css{list-style-type:none;padding:0;margin:0; text-align: center}.ul-css li{padding:8px 16px;border-bottom:1px solid #ddd}.ul-css li:last-child{border-bottom:none}
 right-css{float:right!important}
-                                                                                                         
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.accordion {
+  background-color: #23cbab;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #23cbee;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back, .flip-card-back-two {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #23cbee;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back-two {
+  background-color: #23caaa;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  padding: 0 4px;
+}
+
 @media (max-width:768px){.modal-two{padding-top:50px}}
 @media (min-width:993px){.modal-content{width:900px}.hide-large-main{display:none!important}.sidebar-main.collapable{display:block!important}}
 @media (max-width:992px){.sidebar-main.collapable{display:none}.content-m{margin-left:0!important;margin-right:0!important}
@@ -60,6 +210,10 @@ right-css{float:right!important}
 @media (max-width:600px){.modal-two{padding-top:30px}}
 
 .ani-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 </style>
 </head>
 <body>
@@ -72,48 +226,33 @@ right-css{float:right!important}
   </div>
   <div class="the-bar-block">
     <a href="#" onclick="close_modal()" class="the-bar-item basic-btn hover-white">Home</a>
-    <a href="#showcase" onclick="close_modal()" class="the-bar-item basic-btn hover-white">Showcase</a>
-    <a href="#services" onclick="close_modal()" class="the-bar-item basic-btn hover-white">In progress</a>
-    <a href="#designers" onclick="close_modal()" class="the-bar-item basic-btn hover-white">In progress</a>
-    <a href="#packages" onclick="close_modal()" class="the-bar-item basic-btn hover-white">In progress</a>
+    <a href="#prod-demo" onclick="close_modal()" class="the-bar-item basic-btn hover-white">Project Demo</a>
+    <a href="#hello" onclick="close_modal()" class="the-bar-item basic-btn hover-white">About</a>
+    <a href="#companies" onclick="close_modal()" class="the-bar-item basic-btn hover-white">Companies Worked With</a>
+    <a href="#skills" onclick="close_modal()" class="the-bar-item basic-btn hover-white">Code Experience</a>
   </div>
 </nav>
 
 <!-- Top menu on small screens -->
 <header class="containers top hide-large-main teal xlarge padding">
   <a href="javascript:void(0)" class="basic-btn teal margins-r" onclick="open_modal()">☰</a>
-  <span>Company Name</span>
+  <span>ChairBear</span>
 </header>
 
-<!-- Overlay effect when opening sidebar on small screens -->
 <div class="overlay hide-large-main" onclick="close_modal()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
 <div class="content-m" style="margin-left:340px;margin-right:40px">
 
   <!-- Header -->
-  <div class="containers" style="margin-top:80px" id="showcase">
+  <div class="containers" style="margin-top:80px" id="hello">
     <h1 class="jumbo-txt"><b>Software & Test Engineer</b> </br> and SEO Technician</h1>
-    <h1 class="xxxlarge text-teal"><b>Project Demos</b></h1>
+    <h1 class="xxxlarge text-teal"><b>About</b></h1>
     <hr style="border:5px solid darkseagreen" class="rounder">
+    <p>Welcome to our Github IO page. This page is currently under construction, however, we welcome you to look around
+    </p>
   </div>
 
-  <!-- Photo grid (modal) -->
-  <div class="row-padding">
-    <div class="halves">
-      <img src="#" style="width:100%" onclick="onClick(this)" alt="IMG code project screenshot">
-      <img src="#" style="width:100%" onclick="onClick(this)" alt="IMG code project screenshotn">
-      <img src="#" style="width:100%" onclick="onClick(this)" alt="IMG code project screenshots">
-    </div>
-
-    <div class="halves">
-      <img src="#" style="width:100%" onclick="onClick(this)" alt="IMG code project screenshot">
-      <img src="#" style="width:100%" onclick="onClick(this)" alt="IMG code project screenshot">
-      <img src="#" style="width:100%" onclick="onClick(this)" alt="IMG code project screenshot">
-    </div>
-  </div>
-
-  <!-- Modal for full size images on click-->
   <div id="modal01" class="modal-two black-one" style="padding-top:0" onclick="this.style.display='none'">
     <span class="basic-btn black-one xxlarge display-tr">×</span>
     <div class="modal-content ani-zoom main-centering transp padding-64">
@@ -122,98 +261,199 @@ right-css{float:right!important}
     </div>
   </div>
 
-  <!-- Services -->
-  <div class="containers" id="services" style="margin-top:75px">
-    <h1 class="xxxlarge text-teal"><b>X</b></h1>
-    <hr style="border:5px solid darkseagreen" class="rounder">
-    <p>placeholder
-    </p>
-  </div>
-
-  <!-- Designers -->
-  <div class="containers" id="designers" style="margin-top:75px">
+  <div class="containers" id="companies" style="margin-top:75px">
     <h1 class="xxxlarge text-teal"><b>Companies Worked With</b></h1>
     <hr style="border:5px solid darkseagreen" class="rounder">
     <p>I have worked with some big named brand companies across the years providing various services, read more below.
     </p>
-    <p><b>placeholder</b>:</p>
   </div>
 
-  <!-- The Team -->
+
   <div class="row-padding grad-greyscale">
-    <div class="tb-col m4 margin-btm">
-      <div class="light-grey">
-        <img src="#" alt="Joules" style="width:100%">
-        <div class="containers">
-          <h3>Joules</h3>
-          <p class="opacity">Fashion Company</p>
-          <p>X</p>
+    <div class="row">
+      <div class="column">
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="joulesLogo.png" alt="Joules" style=" width: 100%;height: auto;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Joules</h1>
+          <p>Fashion</p>
+          <p>Performed data analytics on Google Analytics to identify high performing ad campaigns and pages. And provided reports in Power Bi</p>
         </div>
       </div>
     </div>
-    <div class="tb-col m4 margin-btm">
-      <div class="light-grey">
-        <img src="#" alt="Durex" style="width:100%">
-        <div class="containers">
-          <h3>Durex</h3>
-          <p class="opacity">Adult Industry</p>
-          <p>X</p>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="durexLogo.png" alt="Avatar" style=" width: 100%;height: auto;">
+        </div>
+        <div class="flip-card-back-two">
+          <h1>Durex</h1>
+          <p>Adult Health</p>
+          <p>Provided various Technical SEO support including market research and link building</p>
         </div>
       </div>
     </div>
-    <div class="tb-col m4 margin-btm">
-      <div class="light-grey">
-        <img src="#" alt="Wayfair" style="width:100%">
-        <div class="containers">
-          <h3>Wayfair</h3>
-          <p class="opacity">Home Decor</p>
-          <p>X</p>
-        </div>
       </div>
+
+      <div class="column">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="wayfairLogo.png" alt="Avatar" style=" width: 100%;height: auto;">
+            </div>
+            <div class="flip-card-back">
+              <h1>Wayfair</h1>
+              <p>Home Decor</p>
+              <p>Completed product specification sheets & product asset management. Increasing product tag coverage (increasing Search Engine Rank)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="hsamLogo.png" alt="Avatar" style=" width: 100%;height: auto;">
+            </div>
+            <div class="flip-card-back-two">
+              <h1>Signet (H.Samuel and Ernest Jones)</h1>
+              <p>Jewelers</p>
+              <p>Marketing copy creation</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
     </div>
+
   </div>
 
-  <!-- Packages / Pricing Tables -->
-  <div class="containers" id="packages" style="margin-top:75px">
-    <h1 class="xxxlarge text-teal"><b>Coding Languages</b></h1>
+  <div class="containers" id="skills" style="margin-top:75px">
+    <h1 class="xxxlarge text-teal"><b>Coding Experience</b></h1>
     <hr style="border:5px solid darkseagreen" class="rounder">
-    <p> placeholder test</p>
   </div>
 
   <div class="row-padding">
-    <div class="halves margin-btm">
-      <ul class="ul-css light-grey main-centering">
-        <li class="darker-grey xlarge padding-32">PHP</li>
-        <li class="padding-16">5+ years experience</li>
-        <li class="padding-16">PHPUnit, Cypress</li>
-        <li class="padding-16">Worked across B2B</li>
-        <li class="light-grey padding-24">
-          <button class="basic-btn white-txt padding-large hover-black">See Examples</button>
-        </li>
-      </ul>
+    <button class="accordion">Test Engineering</button>
+    <div class="panel">
+
+        I was responsible for creating test executions in the Requirements Traceability Matrix (RTM) and linking them to JIRA tickets, ensuring complete traceability throughout the testing lifecycle. I prepared test environments and populated test data on servers to support various stages of development and quality assurance. To streamline this process, I built data generation scripts that automated the preparation of these test environments.
+
+        A major part of my responsibilities included automating existing test cases using Cypress. I was solely responsible for building out 55% of our Cypress automation suite—a contribution I am particularly proud of. The suite covered multiple functional areas. For the Content Management System (CMS), we had 288 RTMs, and I built 153 of them, accounting for 53% of the coverage. In the Blogs section, I created 4 out of 14 RTMs, representing 28%. Most notably, in the Frontend area, I contributed to 75 out of 76 RTMs, an impressive 98% coverage. Each RTM typically comprised between 4 and 18 individual test cases.</p>
+        My work also involved accessibility validation using IBM Equal Access and Axe DevTools to ensure inclusive product design. My approach blended both technical execution and business insight—supported by my experience in data analysis, software quality assurance, and a background in business administration.
+</div>
+
+    <button class="accordion">Software Engineering</button>
+    <div class="panel">
+        As part of a cross-functional SCRUM team, I worked alongside senior developers, testers, and analysts to build and maintain software features that aligned with business goals. Using Agile methodologies and tools like JIRA and Git, I participated in sprint planning, daily stand-ups, retrospectives, and estimation sessions, ensuring transparency and alignment across team efforts.
+
+        My responsibilities included creating and distributing release documentation, managing ticket workflows, and authoring internal training materials in various formats—often incorporating accessibility best practices. I frequently worked with HTML, PHP, JavaScript, and SCSS to maintain and enhance front-end and back-end systems. I also applied my skills in SQL to design and execute complex queries that supported reporting, development, and testing needs.
+        I performed manual and automated server patching using both Windows and Linux CLI tools, managed Jenkins jobs for deployment pipelines, and maintained AWS environments including AMIs and Launch Templates. I also contributed to code reviews and merge requests, helping enforce version control and coding standards across development branches.
+      </p>
+
     </div>
 
-    <div class="halves">
-      <ul class="ul-css light-grey main-centering">
-        <li class="teal xlarge padding-32">Python</li>
-        <li class="padding-16">1 Year</li>
-        <li class="padding-16">Selenium, Cypress</li>
-        <li class="padding-16">Code projects for qualification</li>
-        <li class="light-grey padding-24">
-          <button class="basic-btn teal padding-large hover-black">See Examples</button>
-        </li>
-      </ul>
+    <button class="accordion">SEO Technician</button>
+    <div class="panel">
+      <p>In addition to core development tasks, I supported cross-team initiatives involving SEO, WordPress site updates, and web analytics using Adobe Analytics and Google Analytics. My work frequently involved tools such as Power BI, and I leveraged my proficiency in Microsoft Office tools—especially Excel, Word, and PowerPoint—to report on project progress, analyze data trends, and deliver stakeholder-facing documentation.</p>
+    </div>
+
+    <button class="accordion">Full Stack Developer</button>
+    <div class="panel">
+      <p> I contributed to both the creation of basic websites and the ongoing support and enhancement of new and existing applications.
+        Working remotely required strong time management and self-direction, which I consistently demonstrated by effectively managing my workload and meeting project deadlines. This autonomy allowed me to build a reliable work routine and develop greater ownership over the projects I supported.
+
+        One of my proudest professional accomplishments from this period is the authorship of 14 technical training books covering various programming languages and frameworks, including titles such as Laravel Basics and PHP Essentials. These handbooks—ranging in length from 14 to 219 pages—were written during a furlough period as a way to stay productive, deepen my technical knowledge, and share it with others. These resources were designed to help onboard new developers and upskill existing team members. Copies are available upon request.</p>
+    </div>
+
+
+  </div>
+
+  <div class="containers" id="prod-demo" style="margin-top:75px">
+  <h1 class="xxxlarge text-teal"><b>Project Demos</b></h1>
+  <hr style="border:5px solid darkseagreen" class="rounder">
+    <p>A selection of examples of various code and training materials. The example button will lead to either one set example or a folder where multiple can be found. For examples that display only one, please do enquire for the others, and they can be linked to separately.
+    </p>
+  </div>
+  <div class="row-padding">
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <ul class="ul-css light-grey">
+          <li class="darker-grey xlarge padding-32">PHP</li>
+          <li>Symfony Word Checker</li>
+          <li class="light-grey padding-24">
+            <a class="basic-btn white-txt padding-large hover-black" href="https://github.com/ChairBearLearning/SymfonyConsoleApp">See Example</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <ul class="ul-css light-grey">
+          <li class="teal xlarge">Python</li>
+          <li>Hangman Game</li>
+          <li>Arithmetic Calculator</li>
+          <li>To Do List</li>
+          <li>Time Calculator</li>
+          <li>Time Probability Calc</li>
+          <li>Budget App</li>
+          <li class="light-grey padding-24">
+            <a class="basic-btn teal padding-large hover-black" href="https://github.com/ChairBearLearning/python-demo-projects">See Examples</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <ul class="ul-css light-grey">
+          <li class="darker-grey xlarge padding-32">Javacript</li>
+          <li>Connect Four</li>
+          <li class="light-grey padding-24">
+            <a class="basic-btn white-txt padding-large hover-black" href="#">See Examples</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <ul class="ul-css light-grey">
+          <li class="teal xlarge ">Training Guides / Books</li>
+          <li>Software Fundamentals</li>
+          <li>Software Theory</li>
+          <li>C# Books</li>
+          <li class="light-grey padding-24">
+            <a class="basic-btn teal padding-large hover-black" href="https://github.com/ChairBearLearning/CSharp">See Example</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
     </div>
   </div>
 
-<!-- End page content -->
 </div>
 
 
 <div class="light-grey containers padding-32" style="margin-top:75px;padding-right:58px"><p class="right-css">Powered by <a href="#" title="demo in progress" target="_blank" class="hover-opacity">in progres</a></p></div>
 
 <script>
-// Script to open and close sidebar
 function open_modal() {
   document.getElementById("mySidebar").style.display = "block";
   document.getElementById("myOverlay").style.display = "block";
@@ -224,12 +464,47 @@ function close_modal() {
   document.getElementById("myOverlay").style.display = "none";
 }
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
 </script>
 
