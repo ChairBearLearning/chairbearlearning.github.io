@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
 <title>Demo site still under construction</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
 <style>
-body {font-size:16px;}
+body {
+         font-family: 'Aleo';
+       font-size:16px;}
 .halves img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .halves img:hover{opacity:1}
 .grad-greyscale{filter:grayscale(75%)}
@@ -52,13 +54,42 @@ xxlarge{font-size:36px!important}
 .ul-css li:hover{background-color:#ccc}
 .ul-css{list-style-type:none;padding:0;margin:0; text-align: center}.ul-css li{padding:8px 16px;border-bottom:1px solid #ddd}.ul-css li:last-child{border-bottom:none}
 right-css{float:right!important}
+.typewriter-p {
+  width: 100%;
+  /*white-space: nowrap;*/
+  display: none;
+  overflow: hidden;
+  animation: shower 5s;
+}
+
+@keyframes shower {
+  from {display: none }
+  to {
+    display: inline-flex;
+  }
+}
+
+.line {
+  /*display: inline;*/
+  position: relative;
+  top: 50%;
+  /*width: 24em;*/
+  border-right: 2px solid black;
+  /*overflow: hidden;*/
+}
+.anim-typewriter {
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: typeWrite 4s steps(40) 1s 1 normal both,
+  blinkText 500ms steps(40) infinite normal;
+}
+
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
-.mySlides {
+.my-project-demo-slides {
   display: none;
 }
 
@@ -141,7 +172,7 @@ right-css{float:right!important}
 }
 
 .panel {
-  padding: 0 18px;
+  padding: 18px 18px;
   background-color: white;
   display: none;
   overflow: hidden;
@@ -214,15 +245,34 @@ right-css{float:right!important}
   from {opacity: .4}
   to {opacity: 1}
 }
+
+@keyframes typeWrite {
+  from {
+    width: 0;
+    color: white;
+  }
+  to {
+    width: auto;
+    color: black;
+  }
+}
+@keyframes blinkText {
+  from {
+    border-right-color: black;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
 </style>
 </head>
 <body>
 
 <!-- Sidebar/menu -->
-<nav class="sidebar-main teal collapable top large-txt padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+<nav class="sidebar-main teal collapable top large-txt padding" style="z-index:3;width:300px;font-weight:bold;" id="the-side-bar-menu"><br>
   <a href="javascript:void(0)" onclick="close_modal()" class="basic-btn hide-large-main display-tl" style="width:100%;font-size:22px">Close Menu</a>
   <div class="containers">
-    <h3 class="padding-64"><b>Chair<br>Bear</b></h3>
+    <h3 class="padding-32"><b>ChairBear</h3>
   </div>
   <div class="the-bar-block">
     <a href="#" onclick="close_modal()" class="the-bar-item basic-btn hover-white">Home</a>
@@ -239,32 +289,33 @@ right-css{float:right!important}
   <span>ChairBear</span>
 </header>
 
-<div class="overlay hide-large-main" onclick="close_modal()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="overlay hide-large-main" onclick="close_modal()" style="cursor:pointer" title="close side menu" id="the-side-menu-overlay"></div>
 
-<!-- !PAGE CONTENT! -->
+
 <div class="content-m" style="margin-left:340px;margin-right:40px">
 
-  <!-- Header -->
+
   <div class="containers" style="margin-top:80px" id="hello">
     <h1 class="jumbo-txt"><b>Software & Test Engineer</b> </br> and SEO Technician</h1>
     <h1 class="xxxlarge text-teal"><b>About</b></h1>
     <hr style="border:5px solid darkseagreen" class="rounder">
-    <p>Welcome to our Github IO page. This page is currently under construction, however, we welcome you to look around
+    <p>Welcome to my Github IO page.I'm a self-driven developer with a strong passion for learning and problem-solving, recently diving deep into Python and Selenium to expand my automation and development skillset.</br> </br>With hands-on experience contributing to projects for major companies like Wayfair and NEXT, I bring both technical expertise and an eagerness to grow. I'm now looking for my next venture—ideally with a forward-thinking team where I can continue to evolve and make meaningful impact.
+    </br></br>
+      My core development experience lies in PHP, with an emphasis the Symfony and Laravel frameworks. I've built and maintained robust backend systems and have consistently contributed to high-impact projects. </br> </br>In addition to my full stack development experience, I have a deep interest in automation and have developed significant proficiency with Cypress. I was instrumental in building out my current companies Cypress test suite—personally contributing around 55% of the total coverage—dramatically improving testing reliability and deployment confidence across teams.
     </p>
   </div>
 
   <div id="modal01" class="modal-two black-one" style="padding-top:0" onclick="this.style.display='none'">
     <span class="basic-btn black-one xxlarge display-tr">×</span>
     <div class="modal-content ani-zoom main-centering transp padding-64">
-      <img id="img01" class="image-css">
-      <p id="caption"></p>
     </div>
   </div>
 
   <div class="containers" id="companies" style="margin-top:75px">
     <h1 class="xxxlarge text-teal"><b>Companies Worked With</b></h1>
     <hr style="border:5px solid darkseagreen" class="rounder">
-    <p>I have worked with some big named brand companies across the years providing various services, read more below.
+    <p>I have worked with some big named brand companies across the years providing various services. </br </br></br>
+      And with this, my roles often involved working closely with company executives and stakeholders to translate business needs into actionable technical outcomes. I’ve produced product specifications, generated analytics reports, and helped inform decision-making with clear, data-driven insights.</br> </br> Beyond technical contributions, I’ve created marketing copy and designed images for websites, supporting e-commerce strategies with content tailored to drive engagement and sales. This blend of technical and business-facing experience makes me confident in communicating across all levels of an organization and delivering value beyond just code.
     </p>
   </div>
 
@@ -329,47 +380,63 @@ right-css{float:right!important}
 
       </div>
 
-
     </div>
 
   </div>
 
   <div class="containers" id="skills" style="margin-top:75px">
     <h1 class="xxxlarge text-teal"><b>Coding Experience</b></h1>
+    <p>A more in depth breakdown of my previous job roles. Click the accordions to open.
+    </p>
     <hr style="border:5px solid darkseagreen" class="rounder">
   </div>
 
   <div class="row-padding">
     <button class="accordion">Test Engineering</button>
     <div class="panel">
+        I was responsible for creating test executions in the Requirements Traceability Matrix (RTM) and linking them to JIRA tickets, ensuring complete traceability throughout the testing lifecycle. I prepared test environments and populated test data on servers to support various stages of development and quality assurance. To streamline this process, I built data generation scripts that automated the preparation of these test environments. </br> </br>
 
-        I was responsible for creating test executions in the Requirements Traceability Matrix (RTM) and linking them to JIRA tickets, ensuring complete traceability throughout the testing lifecycle. I prepared test environments and populated test data on servers to support various stages of development and quality assurance. To streamline this process, I built data generation scripts that automated the preparation of these test environments.
-
-        A major part of my responsibilities included automating existing test cases using Cypress. I was solely responsible for building out 55% of our Cypress automation suite—a contribution I am particularly proud of. The suite covered multiple functional areas. For the Content Management System (CMS), we had 288 RTMs, and I built 153 of them, accounting for 53% of the coverage. In the Blogs section, I created 4 out of 14 RTMs, representing 28%. Most notably, in the Frontend area, I contributed to 75 out of 76 RTMs, an impressive 98% coverage. Each RTM typically comprised between 4 and 18 individual test cases.</p>
+        A major part of my responsibilities included automating existing test cases using Cypress. I was solely responsible for building out 55% of our Cypress automation suite—a contribution I am particularly proud of. The suite covered multiple functional areas. </br> </br> For the Content Management System (CMS), we had 288 RTMs, and I built 153 of them, accounting for 53% of the coverage. </br>In the Blogs section, I created 4 out of 14 RTMs, representing 28%. </br> Most notably, in the Frontend area, I contributed to 75 out of 76 RTMs, an impressive 98% coverage.
+        </br> <br> Each RTM typically comprised between 4 and 18 individual test cases.
+      </br>
         My work also involved accessibility validation using IBM Equal Access and Axe DevTools to ensure inclusive product design. My approach blended both technical execution and business insight—supported by my experience in data analysis, software quality assurance, and a background in business administration.
+      </br> </br>
+      <strong><em>Key Skills learned: - Cypress - Accessibility Tools - RTM - Jira</em></strong>
+      </p>
 </div>
 
     <button class="accordion">Software Engineering</button>
     <div class="panel">
         As part of a cross-functional SCRUM team, I worked alongside senior developers, testers, and analysts to build and maintain software features that aligned with business goals. Using Agile methodologies and tools like JIRA and Git, I participated in sprint planning, daily stand-ups, retrospectives, and estimation sessions, ensuring transparency and alignment across team efforts.
-
-        My responsibilities included creating and distributing release documentation, managing ticket workflows, and authoring internal training materials in various formats—often incorporating accessibility best practices. I frequently worked with HTML, PHP, JavaScript, and SCSS to maintain and enhance front-end and back-end systems. I also applied my skills in SQL to design and execute complex queries that supported reporting, development, and testing needs.
-        I performed manual and automated server patching using both Windows and Linux CLI tools, managed Jenkins jobs for deployment pipelines, and maintained AWS environments including AMIs and Launch Templates. I also contributed to code reviews and merge requests, helping enforce version control and coding standards across development branches.
+</br> </br>
+        My responsibilities included creating and distributing release documentation, managing ticket workflows, and authoring internal training materials in various formats—often incorporating accessibility best practices.
+      </br></br>I frequently worked with HTML, PHP, JavaScript, and SCSS to maintain and enhance front-end and back-end systems.
+      </br></br>I also applied my skills in SQL to design and execute complex queries that supported reporting, development, and testing needs.
+        I performed manual and automated server patching using both Windows and Linux CLI tools, managed Jenkins jobs for deployment pipelines, and maintained AWS environments including AMIs and Launch Templates.</br></br> I also contributed to code reviews and merge requests, helping enforce version control and coding standards across development branches.
+      </br></br>
+      <strong><em>Key Skills learned: - PHP - Symphony - PHPUnit tests - Javascript - HTML - Twig - CSS/SCSS - SQL</em></strong>
       </p>
 
     </div>
 
     <button class="accordion">SEO Technician</button>
     <div class="panel">
-      <p>In addition to core development tasks, I supported cross-team initiatives involving SEO, WordPress site updates, and web analytics using Adobe Analytics and Google Analytics. My work frequently involved tools such as Power BI, and I leveraged my proficiency in Microsoft Office tools—especially Excel, Word, and PowerPoint—to report on project progress, analyze data trends, and deliver stakeholder-facing documentation.</p>
+      <p>In addition to core development tasks, I supported cross-team initiatives involving SEO, WordPress site updates, and web analytics using Adobe Analytics and Google Analytics. </br> </br> My work frequently involved tools such as Power BI, and I leveraged my proficiency in Microsoft Office tools—especially Excel, Word, and PowerPoint—to report on project progress, analyze data trends, and deliver stakeholder-facing documentation.
+        </br></br>
+        <strong><em>Key Skills learned: - Power BI - Microsoft Suite - Google Suite - Google Analytics - Adobe Analytics </em></strong>
+      </p>
     </div>
 
     <button class="accordion">Full Stack Developer</button>
     <div class="panel">
       <p> I contributed to both the creation of basic websites and the ongoing support and enhancement of new and existing applications.
+        </br></br>
         Working remotely required strong time management and self-direction, which I consistently demonstrated by effectively managing my workload and meeting project deadlines. This autonomy allowed me to build a reliable work routine and develop greater ownership over the projects I supported.
-
-        One of my proudest professional accomplishments from this period is the authorship of 14 technical training books covering various programming languages and frameworks, including titles such as Laravel Basics and PHP Essentials. These handbooks—ranging in length from 14 to 219 pages—were written during a furlough period as a way to stay productive, deepen my technical knowledge, and share it with others. These resources were designed to help onboard new developers and upskill existing team members. Copies are available upon request.</p>
+        </br></br>
+        One of my proudest professional accomplishments from this period is the authorship of 14 technical training books covering various programming languages and frameworks, including titles such as Laravel Basics and PHP Essentials. These handbooks—ranging in length from 14 to 219 pages—were written during a furlough period as a way to stay productive, deepen my technical knowledge, and share it with others. These resources were designed to help onboard new developers and upskill existing team members.    </br></br> Copies are available upon request.
+        </br></br>
+        <strong><em>Key Skills learned: - PHP - Laravel - PHPUnit tests - Javascript - HTML - CSS/SCSS - SQL - Python - C# - .NET Framework - Unity</em></strong>
+      </p>
     </div>
 
 
@@ -384,7 +451,7 @@ right-css{float:right!important}
   <div class="row-padding">
     <div class="slideshow-container">
 
-      <div class="mySlides fade">
+      <div class="my-project-demo-slides fade">
         <div class="numbertext">1 / 4</div>
         <ul class="ul-css light-grey">
           <li class="darker-grey xlarge padding-32">PHP</li>
@@ -395,7 +462,7 @@ right-css{float:right!important}
         </ul>
       </div>
 
-      <div class="mySlides fade">
+      <div class="my-project-demo-slides fade">
         <div class="numbertext">2 / 4</div>
         <ul class="ul-css light-grey">
           <li class="teal xlarge">Python</li>
@@ -411,7 +478,7 @@ right-css{float:right!important}
         </ul>
       </div>
 
-      <div class="mySlides fade">
+      <div class="my-project-demo-slides fade">
         <div class="numbertext">3 / 4</div>
         <ul class="ul-css light-grey">
           <li class="darker-grey xlarge padding-32">Javacript</li>
@@ -422,7 +489,7 @@ right-css{float:right!important}
         </ul>
       </div>
 
-      <div class="mySlides fade">
+      <div class="my-project-demo-slides fade">
         <div class="numbertext">4 / 4</div>
         <ul class="ul-css light-grey">
           <li class="teal xlarge ">Training Guides / Books</li>
@@ -451,17 +518,17 @@ right-css{float:right!important}
 </div>
 
 
-<div class="light-grey containers padding-32" style="margin-top:75px;padding-right:58px"><p class="right-css">Powered by <a href="#" title="demo in progress" target="_blank" class="hover-opacity">in progres</a></p></div>
+<div class="light-grey containers padding-32" style="margin-top:75px;padding-right:58px"><p class="right-css">Built by tired bears</p></div>
 
 <script>
 function open_modal() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
+  document.getElementById("the-side-bar-menu").style.display = "block";
+  document.getElementById("the-side-menu-overlay").style.display = "block";
 }
 
 function close_modal() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
+  document.getElementById("the-side-bar-menu").style.display = "none";
+  document.getElementById("the-side-menu-overlay").style.display = "none";
 }
 
 
@@ -478,7 +545,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
+  let slides = document.getElementsByClassName("my-project-demo-slides");
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
