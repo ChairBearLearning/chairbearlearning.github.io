@@ -16,6 +16,10 @@ h3 {
     margin-bottom: 1em;
 }
 
+.key-takeaways > li {
+    padding-top: 10px;
+}
+
 /* image hover */
 .halves img {
     margin-bottom: -6px;
