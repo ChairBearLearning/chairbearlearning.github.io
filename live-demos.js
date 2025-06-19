@@ -5,6 +5,8 @@ FCC Creature Demo Start
 const creatures = [
     {name: 'Pyrolynx',id: 1, weight: 42, height: 32, hp: 65, attack: 80, defense: 50, specialAttack: 90, specialDefense: 55,  speed: 100, types: ['fire'] },
     {name: 'Aquoroc',id: 2, weight: 220, height: 53, hp: 85, attack: 90, defense: 120, specialAttack: 60, specialDefense: 75,  speed: 40, types: ['water', 'rock']},
+    {name: 'Terradon',id: 3, weight: 60, height: 58, hp: 95, attack: 120, defense: 12, specialAttack: 9, specialDefense: 95,  speed: 44, types: ['psychic', 'steel']},
+    {name: 'Beastmere',id: 4, weight: 22, height: 54, hp: 155, attack: 70, defense: 19, specialAttack: 43, specialDefense: 45,  speed: 88, types: ['fairy', 'electric']},
 ];
 
 
