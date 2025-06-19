@@ -1,0 +1,482 @@
+/*body {*/
+/*    line-height: 1.5;*/
+/*    height: 100vh;*/
+/*    font-family: sans-serif;*/
+/*    background-color: #1b1b32;*/
+/*    color: #0a0a23;*/
+/*    font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+/*}*/
+
+/*main {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*h1 {*/
+/*    color: #f5f6f7;*/
+/*    font-size: 1.7em;*/
+/*    text-align: center;*/
+/*}*/
+
+.rpg-container {
+    width: 325px;
+    margin: 25px 0;
+    background-color: #f5f6f7;
+    border: 1px solid #f5f6f7;
+    border-radius: 15px;
+    box-shadow: 15px 10px 0px 0px rgba(158 158 158 / 75%);
+}
+
+.rpg-output,
+#search-form {
+    display: flex;
+    justify-content: center;
+}
+
+#search-form {
+    flex-wrap: wrap;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 8px 8px 0 0;
+    gap: 10px;
+}
+
+label.rpg {
+    align-self: center;
+}
+
+#search-input:focus-visible,
+#search-button:focus-visible {
+    outline: 3px solid #198eee;
+}
+
+#search-input {
+    height: 40px;
+    padding-left: 10px;
+    width: 200px;
+}
+
+#search-button {
+    padding: 14px 0;
+    width: 80px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #23cb;
+    color: #f5f6f7;
+    border: none;
+}
+
+.rpg-output {
+    margin: 10px 0;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-rpg-container,
+.bottom-rpg-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.top-rpg-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: wheat;
+    min-height: 200px;
+}
+
+.bottom-rpg-container {
+    min-height: 325px;
+}
+
+.name-and-id {
+    height: 28px;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+#creature-name,
+#special-name {
+    font-weight: bold;
+}
+
+.size,
+#special-description {
+    font-size: 0.85rem;
+}
+
+#types {
+    min-height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.type {
+    width: 66px;
+    padding: 5px;
+    font-size: 0.7rem;
+    text-align: center;
+    border-radius: 5px;
+    background-color: red;
+    text-transform: uppercase;
+}
+
+table.rpg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    font-size: 1 rem;
+    color: #f5f6f7;
+    background-color: #23cb;
+}
+
+th:nth-child(even),
+td:nth-child(even) {
+    border-left: 5px solid #f5f6f7;
+}
+
+tr {
+    border-bottom: 5px solid #f5f6f7;
+}
+
+td,
+th {
+    text-align: center;
+    padding: 8px;
+}
+
+.normal {
+    background-color: white;
+}
+
+.fire {
+    background-color: darkred;
+}
+
+.water {
+    background-color: darkturquoise;
+}
+
+.electric {
+    background-color: gold;
+}
+
+.grass {
+    background-color: darkseagreen;
+}
+
+.ice {
+    background-color: cornflowerblue;
+}
+
+.fighting {
+    background-color: brown;
+}
+
+.poison {
+    background-color: greenyellow;
+}
+
+.ground {
+    background-color: coral;
+}
+
+.flying {
+    background-color: lightskyblue;
+}
+
+.psychic {
+    background-color: yellow;
+}
+
+.bug {
+    background-color: lightgreen;
+}
+
+.rock {
+    background-color: sandybrown;
+}
+
+.ghost {
+    background-color: rebeccapurple;
+}
+
+.dragon {
+    background-color: mediumpurple;
+}
+
+.dark {
+    background-color: midnightblue;
+}
+
+.steel {
+    background-color: lightgray;
+}
+
+.fairy {
+    background-color: pink;
+}
+
+@media screen and (min-width: 550px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .rpg-container {
+        width: 550px;
+    }
+
+    #search-form,
+    .top-rpg-container,
+    .bottom-rpg-container {
+        width: 95%;
+    }
+
+    .type {
+        width: 75px;
+    }
+}
+
+/*
+RSVP
+ */
+/* =================================
+  Element Styles
+==================================== */
+
+/** {*/
+/*    box-sizing: border-box;*/
+/*}*/
+/*body {*/
+/*    font-family: 'Lato', sans-serif;*/
+/*    color: #4c4c4c;*/
+/*    background: #f8fdf3;*/
+/*}*/
+h1.rsvp,
+p.rsvp,
+form#registrar button {
+    color: white;
+}
+
+h2.rsvp {
+    margin-top: 0;
+}
+p.rsvp {
+    font-size: 1.1em;
+    text-shadow: 0 1px 0 rgba(0,0,0, .25);
+}
+form#registrar {
+    width: 60%;
+    background: white;
+    display: inline-block;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: flex;
+    border-radius: .2em;
+    border: solid 4px white;
+    box-shadow: 0 1px 14px rgba(0,0,0, .12);
+}
+form#registrar button {
+    padding: 0 1em;
+    font-size: 1em;
+    background: #23cbab;
+    border-radius: .8em;
+}
+ul#invitedList {
+    list-style: none;
+    padding: 0;
+    margin: 2em 0 1em;
+}
+ul#invitedList li {
+    padding: 1em;
+    background: #fff;
+    border-radius: .2em;
+    border: solid 1px rgba(88, 183, 205, .2);
+    border-bottom: solid 2px rgba(88, 183, 205, .2);
+    position: relative;
+}
+button {
+    cursor: pointer;
+}
+input,
+button {
+    border: none;
+    outline: none;
+}
+header {
+    text-align: center;
+    background: linear-gradient(90deg, #d4eece, #55b3d0, #1e7eb7);
+}
+header input {
+    padding: 12px;
+    font-size: 1.15em;
+    width: 100%;
+}
+li span,
+li input[type=text] {
+    color: #707070;
+    font-size: 1.3em;
+    margin-bottom: .3em;
+}
+li input[type=text] {
+    padding: .2em;
+    width: 95%;
+    border: 1px dotted rgba(0,0,0, .2);
+}
+li label {
+    font-size: .9em;
+    display: block;
+    color: rgba(112, 112, 112, .55);
+}
+li span,
+li input[type=text]:first-child {
+    display: block;
+}
+li button {
+    font-size: .78em;
+    margin-top: 1.65em;
+    margin-right: .4em;
+    border-radius: .3em;
+    padding: .4em .6em;
+    color: white;
+    background: #58b7cd;
+}
+li button:last-child {
+    background: rgba(88, 183, 205, .5);
+}
+.wrapper-rsvp {
+    width: 100%;
+    max-width: 900px;
+    margin: 2.5em auto;
+    border-radius: .35em;
+    background: #fcfcfc;
+    overflow: hidden;
+    box-shadow: 0 0 26px rgba(0,0,0, .13);
+}
+div > input:last-child {
+    font-size: 1em;
+    margin-left: 6px;
+}
+div > label {
+    color: #767676;
+}
+
+/* responded */
+.responded {
+    transition: 0.4s;
+    border-color: rgba(88, 183, 205, .9);
+}
+.responded label {
+    transition: 0.4s;
+    color: rgba(88, 183, 205, 1);
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 0) and (max-width: 768px) {
+    header {
+        padding: 1.25em;
+    }
+    h1.rsvp {
+        font-size: 3.6em;
+        margin: .3em 0 0;
+    }
+    ul#invitedList li {
+        margin-bottom: 1em;
+    }
+    form#registrar {
+        width: 95%;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 2.5em;
+    }
+    form#registrar button {
+        padding: 12px 0;
+        margin-top: .5em;
+    }
+    form#registrar input {
+        font-size: 1em;
+        text-align: center;
+    }
+    .wrapper-rsvp {
+        margin: 0;
+    }
+    .main {
+        padding: 2em 1em .75em;
+    }
+}
+
+@media (min-width: 769px) {
+    header {
+        height: 280px;
+        padding: 2.5em 1em 1em;
+        background-position: 0 -95px;
+    }
+    .main > div {
+        float: right;
+        display: inline-block;
+        margin-top: 12px;
+        margin-right: 1.25%;
+    }
+    div > label {
+        margin-top: 12px;
+    }
+    h1.rsvp {
+        font-size: 5.8em;
+    }
+    h2.rsvp {
+        float: left;
+        font-size: 1.9em;
+        margin-left: 1.25%;
+    }
+    form#registrar {
+        margin: 4.15em auto 0;
+        z-index: 3000;
+        position: relative;
+    }
+    .wrapper-rsvp {
+        width: 90%;
+    }
+    .main {
+        padding: 3.8em 1.5em .75em;
+        position: relative;
+        z-index: 10;
+    }
+    ul#invitedList {
+        display: -webkit-flex;
+        display: flex;
+        clear: both;
+
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding-top: 1.25em;
+    }
+    ul#invitedList li {
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+        -webkit-flex-basis: 47.5%;
+        flex-basis: 47.5%;
+        margin: 0 1.25% 1em;
+    }
+}
+@media (min-width: 880px) {
+    ul#invitedList li {
+        -webkit-flex-basis: 20%;
+        flex-basis: 20%;
+    }
+}

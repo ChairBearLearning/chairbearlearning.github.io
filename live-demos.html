@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>ChairBear Live Demos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../live-demos.css">
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="sidebar-main teal collapable top large-txt padding" style="z-index:3;width:300px;font-weight:bold;" id="the-side-bar-menu"><br>
+    <a href="javascript:void(0)" onclick="close_modal()" class="basic-btn hide-large-main display-tl" style="width:100%;font-size:22px">Close Menu</a>
+    <div class="containers">
+        <h3 class="padding-32"><b>ChairBear</b></h3>
+    </div>
+    <div class="the-bar-block">
+        <a href="https://chairbearlearning.github.io" onclick="close_modal()" class="the-bar-item basic-btn hover-white">Home</a>
+        <a href="#rsvp" onclick="close_modal()" class="the-bar-item basic-btn hover-white">RSVP Application</a>
+        <a href="#fcc-rpg-creature" onclick="close_modal()" class="the-bar-item basic-btn hover-white">RPG Creature Search</a>
+    </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="containers top hide-large-main teal xlarge padding">
+    <a href="javascript:void(0)" class="basic-btn teal margins-r" onclick="open_modal()">☰</a>
+    <span>ChairBear</span>
+</header>
+
+<div class="overlay hide-large-main" onclick="close_modal()" style="cursor:pointer" title="close side menu" id="the-side-menu-overlay"></div>
+
+<div class="content-m" style="margin-left:340px;margin-right:40px">
+
+    <div class="containers" id="fcc-rpg-creature" style="margin-top:75px">
+        <h3 class="xxxlarge text-teal"><b>FCC RPG Creature Search</b></h3>
+        <hr style="border:5px solid darkseagreen" class="rounder">
+
+        <div class="row-padding">
+            <h1>RPG Creature Search</h1>
+            <p></p>
+            <div class="rpg-container">
+                <form role="search" id="search-form">
+                    <label for="search-input">Search for Creature Name or ID:</label>
+                    <input type="text" name="creature" id="search-input" required="">
+                    <button id="search-button">Search</button>
+                </form>
+                <div class="output-rpg">
+                    <div class="top-rpg-container">
+                        <div class="name-and-id">
+                            <span id="creature-name"></span>
+                            <span id="creature-id"></span>
+                            <div class="size">
+                                <span id="weight"></span>
+                                <span id="height"></span>
+                            </div>
+                        </div>
+                        <div id="types"></div>
+                        <div>
+                            <div id="special-name"></div>
+                            <div id="special-description"></div>
+                        </div>
+                    </div>
+                    <div class="bottom-rpg-container">
+                        <table>
+                            <tbody><tr>
+                                <th>Base</th>
+                                <th>Stats</th>
+                            </tr>
+                            <tr>
+                                <td>HP:</td>
+                                <td id="hp"></td>
+                            </tr>
+                            <tr>
+                                <td>Attack:</td>
+                                <td id="attack"></td>
+                            </tr>
+                            <tr>
+                                <td>Defense:</td>
+                                <td id="defense"></td>
+                            </tr>
+                            <tr>
+                                <td>Sp. Attack:</td>
+                                <td id="special-attack"></td>
+                            </tr>
+                            <tr>
+                                <td>Sp. Defense:</td>
+                                <td id="special-defense"></td>
+                            </tr>
+                            <tr>
+                                <td>Speed:</td>
+                                <td id="speed" class="speed"></td>
+                            </tr>
+                            </tbody></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="containers" id="rsvp" style="margin-top:75px">
+        <h3 class="xxxlarge text-teal"><b>RSVP Browser App</b></h3>
+        <hr style="border:5px solid darkseagreen" class="rounder">
+
+        <div class="row-padding">
+            <div class="wrapper-rsvp">
+                <header>
+                    <h1 class="rsvp">RSVP</h1>
+                    <p class="rsvp">A RSVP Application</p>
+                    <form id="registrar">
+                        <input type="text" name="name" placeholder="Invite Someone">
+                        <button type="submit" name="submit" value="submit">Submit</button>
+                        <button type="button" onclick="downloadCSV()">Download CSV</button>
+                        <button type="button" onclick="downloadText()">Download Text File</button>
+                    </form>
+                    </br>
+
+                </header>
+                <br><br>
+                <div class="main">
+                    <h2 class="rsvp">Invitees</h2>
+                    <ul id="invitedList"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="light-grey containers padding-32" style="margin-top:75px;padding-right:58px"><p class="right-css">Built by tired bears</p></div>
+<script src="../live-demos.js">
+</script>
+<script src="../main.js"></script>
+
+</body>
+</html>
